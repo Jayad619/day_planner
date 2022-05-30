@@ -18,8 +18,14 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <title>Work Day Scheduler</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
+    <title>My Work Day Scheduler</title>
   </head>
 
   <body>
@@ -31,6 +37,7 @@
     <div class="container">
       <!-- Timeblocks go here -->
       <div class ="time-block">
+        <div class = "container">
          <!-- 9am block -->
          <div id="9am" class="row time-block">
           <div class="col-md-1 hour">
@@ -38,6 +45,98 @@
           </div>
           <input id ="myText" class="col-md-9 description"/>
           <button class="saveBtn col">SAVE</button>
+        </div>
+      </div>
+      <div class = "container">
+         <!-- 10am block -->
+         <div id="10am" class="row time-block">
+          <div class="col-md-1 hour">
+              10 am
+          </div>
+          <input id ="myText" class="col-md-9 description"/>
+          <button class="saveBtn col">SAVE</button>
+        </div>
+      </div>
+      <div class = "container">
+        <!-- 11am block -->
+        <div id="11am" class="row time-block">
+          <div class="col-md-1 hour">
+              11 am
+          </div>
+          <input id ="myText" class="col-md-9 description"/>
+          <button class="saveBtn col">SAVE</button>
+        </div>
+      </div>
+        <div class = "container">
+          <!-- 12pm block -->
+          <div id="12pm" class="row time-block">
+            <div class="col-md-1 hour">
+                12 pm
+              </div>
+            <input id ="myText" class="col-md-9 description"/>
+            <button class="saveBtn col">SAVE</button>
+          </div>
+        </div>
+        </div>
+        <div class = "container">
+           <!-- 1pm block -->
+           <div id="1pm" class="row time-block">
+            <div class="col-md-1 hour">
+                1 pm
+            </div>
+            <input id ="myText" class="col-md-9 description"/>
+            <button class="saveBtn col">SAVE</button>
+          </div>
+          </div>
+          <div class = "container">
+            <!-- 2pm block -->
+            <div id="2pm" class="row time-block">
+              <div class="col-md-1 hour">
+                  2 pm
+              </div>
+              <input id ="myText" class="col-md-9 description"/>
+              <button class="saveBtn col">SAVE</button>
+            </div>
+            </div>
+            <div class = "container">
+            <!-- 3pm block -->
+            <div id="3pm" class="row time-block">
+              <div class="col-md-1 hour">
+                  3 pm
+              </div>
+              <input id ="myText" class="col-md-9 description"/>
+              <button class="saveBtn col">SAVE</button>
+            </div>
+          </div>
+          <div class = "container">
+            <!-- 4pm block -->
+            <div id="4pm" class="row time-block">
+              <div class="col-md-1 hour">
+                  4 pm
+              </div>
+              <input id ="myText" class="col-md-9 description"/>
+              <button class="saveBtn col">SAVE</button>
+          </div>
+            </div>
+            <div class = "container">
+             <!-- 5pm block -->
+             <div id="5pm" class="row time-block">
+              <div class="col-md-1 hour">
+                  5 pm
+              </div>
+              <input id ="myText" class="col-md-9 description"/>
+              <button class="saveBtn col">SAVE</button>
+          </div>
+            </div>
+            <div class = "container">
+           <!-- 6pm block -->
+           <div id="6pm" class="row time-block">
+            <div class="col-md-1 hour">
+                6 pm
+            </div>
+            <input id ="myText" class="col-md-9 description"/>
+            <button class="saveBtn col">SAVE</button>
+          </div>
         </div>
       </div>
     </div>
