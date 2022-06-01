@@ -41,4 +41,28 @@ $(document).ready(function () {
     $("#5pm .description").val(localStorage.getItem("5pm"));
     $("#6pm .description").val(localStorage.getItem("6pm"));
   });
+
+  // changing the colours based on current, past, future tense
+
+// Each 'input' box will get colour coded based on the below function
+DescriptionBox.each(function (Color) {
+    
+    // If the current hour is equals to hours counting it is PRESENT...
+    if (CurrentHR == Color + 9) {
+      // Find the 'present' class and colour RED -> CSS
+      $(this).addClass("present");
+    }
+
+    // "color" is 0, if "0" and counting + 9 is less than current hour, then create class PAST...
+    if (CurrentHR > Color + 9) {
+      // Find the 'past' class and colour GREY -> CSS
+      $(this).addClass("past");
+    }
   
+    // If counting number + 9 is larger than current hour, then create class FUTURE...
+    if (CurrentHR < Color + 9) {
+      // Find the 'future' class and colour GREEN -> CSS
+      $(this).addClass("future");
+    }
+  });
+  console.log(CurrentHR);
