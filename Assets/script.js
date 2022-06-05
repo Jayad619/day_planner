@@ -2,8 +2,8 @@
 
 var myTEXT =$("#myText");
 var saveBtn =$(".savebtn");
-var DescriptionBox =$("input");
-var CurrentHR = moment().format("h");
+
+
 
 //adding todays Date
 
@@ -28,41 +28,58 @@ $(document).ready(function () {
       console.log("button is clicked");
       console.log(myText);
       console.log(timings);
+    //   console.log(CurrentHR);
     });
   
-    $("#9am .description").val(localStorage.getItem("9am"));
-    $("#10am .description").val(localStorage.getItem("10am"));
-    $("#11am .description").val(localStorage.getItem("11am"));
-    $("#12pm .description").val(localStorage.getItem("12pm"));
-    $("#1pm .description").val(localStorage.getItem("1pm"));
-    $("#2pm .description").val(localStorage.getItem("2pm"));
-    $("#3pm .description").val(localStorage.getItem("3pm"));
-    $("#4pm .description").val(localStorage.getItem("4pm"));
-    $("#5pm .description").val(localStorage.getItem("5pm"));
-    $("#6pm .description").val(localStorage.getItem("6pm"));
-  });
 
   // changing the colours based on current, past, future tense
 
 // Each 'input' box will get colour coded based on the below function
-DescriptionBox.each(function (Color) {
-    
+function descriptionBox() {
+    var CurrentHR = moment().hours();
+    $(".time-block").each(function() {
+    var clockHr = parseInt(
+        $(this).attr("id")
+        .split("-")[1]
+    );
+
+    if (CurrentHR > clockHr) {
+      // Find the 'past' class and colour GREY -> CSS
+      $(this).addClass("past");
+    }
+
     // If the current hour is equals to hours counting it is PRESENT...
-    if (CurrentHR == Color + 9) {
+    else if (CurrentHR === clockHr) {
       // Find the 'present' class and colour RED -> CSS
+      $(this).removeClass("past");
       $(this).addClass("present");
     }
 
     // "color" is 0, if "0" and counting + 9 is less than current hour, then create class PAST...
-    if (CurrentHR > Color + 9) {
-      // Find the 'past' class and colour GREY -> CSS
-      $(this).addClass("past");
-    }
-  
+    
     // If counting number + 9 is larger than current hour, then create class FUTURE...
-    if (CurrentHR < Color + 9) {
+    else {
       // Find the 'future' class and colour GREEN -> CSS
+      $(this).removeClass("past");
+      $(this).removeClass("present");
       $(this).addClass("future");
     }
-  });
-  console.log(CurrentHR);
+    console.log(clockHr)
+    console.log(CurrentHR)
+    console.log(this)
+})}
+descriptionBox();
+
+$("#hour-9 .description").val(localStorage.getItem("hour-9"));
+    $("#hour-10 .description").val(localStorage.getItem("hour-10"));
+    $("#hour-11 .description").val(localStorage.getItem("hour-11"));
+    $("#hour-12 .description").val(localStorage.getItem("hour-12"));
+    $("#hour-13 .description").val(localStorage.getItem("hour-13"));
+    $("#hour-14 .description").val(localStorage.getItem("hour-14"));
+    $("#hour-15 .description").val(localStorage.getItem("hour-15"));
+    $("#hour-16 .description").val(localStorage.getItem("hour-16"));
+    $("#hour-17 .description").val(localStorage.getItem("hour-17"));
+    $("#hour-18 .description").val(localStorage.getItem("hour-18"));
+  
+});
+
