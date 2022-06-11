@@ -23,7 +23,7 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
 
-![Alt text](Assets/Screenshot 2022-06-11 at 20.41.39.png "Optional Title")
+<img width="1512" alt="Screenshot 2022-06-11 at 20 41 39" src="https://user-images.githubusercontent.com/102623563/173202883-708df256-e03e-4d11-9963-a0d795f4d17f.png">
 
 links:
 https://github.com/Jayad619/day_planner
