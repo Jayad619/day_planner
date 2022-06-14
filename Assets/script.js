@@ -28,7 +28,7 @@ $(document).ready(function () {
       console.log("button is clicked");
       console.log(myText);
       console.log(timings);
-    //   console.log(CurrentHR);
+      // console.log(CurrentHR);
     });
   
 
